@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+\moderncvtheme[blue]{classic} 
+\usepackage[utf8]{inputenc}  %Windows 
+
+%\usepackage[scale=0.975]{geometry}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{graphicx}
+
+
+\firstname{Ahana~Ghosh}
+\familyname{}
+%\maketitle{B.Tech Computer Science, M.Sc. Hons.Mathematics, 4{$th$} Year,
+%BITS Pilani Hyderabad,India}      
+%\address{Villa-5, Prestige Royal Woods, Kismatpur}{Hyderabad-500086, Telangana, India}  
+\address{}
+%\mobile{+91 7036232227}    
+%\phone{}                
+%\fax{Votre Fax}                      
+%\email{ahana204@gmail.com}                              
+\extrainfo{}
+\photo[100pt]{ahana.jpeg} 
+%\quote{Objective: To unravel the mystery of life using systemic science,Bayesian Learning in particular.}         
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+\usepackage{multibib}
+\newcites{book,misc}{{Books},{Others}}
+
+\nopagenumbers{}                         
+\begin{document}
+\maketitle \Large{\textbf{B.Tech Computer Science, M.Sc. Hons.Mathematics}\\ \textbf{5{$^{th}$} Year}\\
+\textbf{BITS Pilani Hyderabad, India}\\
+\textbf{Email}: \href{ahana204@gmail.com}{ahana204@gmail.com},      \href{f20140525@hyderabad.bits-pilani.ac.in}{f20140525@hyderabad.bits-pilani.ac.in}}   
+%\maketitle
+\section{Education}
+\cventry{2014--Present}{Dual Degree, Bachelor's in Computer Science and Masters in Mathematics, }{BITS Pilani Hyderabad, Class of 2019}{Telangana, India}{\textit{CGPA till 8${th}$ semester : 9.068}}{}
+\cventry{2012--2014}{High School}{Andhra Pradesh Higher Secondary Board of Education}{Telangana, India}{\textit{97.7 per cent}}{}
+\cventry{2012}{Secondary School, Central Board of Secondary Education}{CHIREC Public School}{Telangana, India}{\textit{CGPA:10}}{} 
+
+\section{Scholastic Achievements}
+\cvline{2014-Present}{INSPIRE Scholar: Scholarship for higher education awarded by the department of science and technology, government of India, for a period of 5 years. Annual Stipend:INR 60,000/- }
+\cvline{July 2017}{Awarded the Best Poster at 4{$^{th}$} Annual Summer Symposium, Tata Institute of Fundamental Research, Hyderabad: The poster was on the MongoDB and NodeJS based application for a 134 Kilo Molecular Dataset.}
+\cvline{2015-2017}{BITS Pilani Hyderabad merit scholar: Received the BITS Hyderabad merit scholarship for semesters 3,4,5 and 6}
+\cvline{2014-2016}{Course Topper: Biology, Abstract Algebra, Theory of Ordinary Differential Equations}
+\cvline{2016-2017}{Teaching Assistant: MATH F112 (Probability and Statistics), MATH F212 (Optimization)}
+
+\section{Research Experience}
+\cventry{June 2018-Present}{Research Intern}{Max Planck Institute of Software Systems, Saarbrucken, Germany}{}{Machine Teaching Group under Adish Singla}{Currently pursuing a project on Inverse Reinforcement Learning in the Machine Teaching Group under Adish Singla.}
+\cventry{May-July 2017}{VSRP (Visiting Student Research Program) Fellow}{Tata Institute of Fundamental Research, Hyderabad, India}{}{Database Systems project under Dr. Raghunathan Ramakrishnan}{Developed a database/data-mining platform and a RESTful API for 134Kilo molecular dataset using NodeJS and MONGODB. The web application enabled property  based querying and charting of the dataset.}
+\cventry{June-August 2016}{VSRP (Visiting Student Research Program) Fellow}{Tata Institute of Fundamental Research, Hyderabad, India}{}{Machine Learning project under Dr. Raghunathan Ramakrishnan}{Studied sparse supervised learning algorithms: LASSO, ridge regression, SVM, Random Forest for application to classifying dipole-dipolarophile organic reactions. Also, mechanisms to improve the performance of LASSO were implemented using optimization techniques such as SUBPLEX, coordinate descent algorithms and Ridge Regression in order to reduce the bias of LASSO for better predictive accuracy.}
+
+\section{Seminars and Posters Presented}
+\cventry{July 2017}{Poster presented at the 4th annual summer symposium}{Tata Institute of Fundamental Research}{Hyderabad, India}{}{The poster depicted the utility of MongoDB for the creation BIG databases, as it was applied to the 134Kilo Molecules dataset.}
+\cventry{August 2015}{Seminar Presented on Supervised Machine Learning Algorithms used in the realm of Cancer Research}{Department of Biological Sciences, BITS Pilani Hyderabad}{India}{}{In the seminar techniques such as SVM, Kernel methods and Regression Curve Analysis were discussed along with their application in the detection of Breast Cancer.}
+
+\cventry{September 2010}{Model Presented at the National Science Children's Congress 2010}{Focal Theme: Environment Conservation}{Hyderabad, India}{}{This was conducted by the Government of India.A tool was designed to detect the level of soil compaction in any area. Various schemes to reduce soil compaction were presented, and its prevention strategies were discussed. The project was selected for the State Level round as well.}
+
+\section{Projects}
+\cventry{January 2018 - April 2018}{Web based interface for Autism School, SMILES}{Developed a website for an Autism School to store, calculate, and maintain the medical history of autistic children}{SMILES Foundation, Hyderabad, India}{}{The website was built using NodeJS and for the database MongoDB was used.}
+\cventry{November 2017, April 2018}{Binary Sentiment analysis using Naive Bayes Classifier, Multi-class Logistic Regression with Parameter Optimization , JAVA}{Code Link: https://github.com/ahana204}{BITS Pilani Hyderabad, India}{}{A binary sentiment analyzer was developed in JAVA using modifications of the Naive Bayes classifier and a multi-class logistic regression algorithm was implemented with grid search to deal with any generic dataset.}
+\cventry{September 2017}{Implemented Random Forest, ID3 with pruning in JAVA}{Project done as part of the machine learning course}{BITS Pilani Hyderabad, India}{}{The model works for any categorical data-set. The execution time of the model is comparable to the CARET Package of R.}
+\cventry{August 2017-December 2017}{Fractal Theory}{Design Project}{BITS Pilani Hyderabad, India}{Guide: Prof.Sharan Gopal}{Completed a study/design project on Fractal Theory in order to understand the properties of fractals and visualize them using programming tools. I am also exploring the applications of fractal dimensions for fast feature selection.}
+\cventry{March 2017}{Student Healthcare Database using MongoDB}{Project done as part of the Database Systems course}{BITS Pilani Hyderabad, India}{}{A student health care database was created for the students on campus using MongoDB. The front end was a website, created using NodeJS. Students could update their health records, and query relevant information such as, 'Contact Details of students with a certain Blood Group' through the website.}
+\cventry{November 2015}{Program to Find the Shortest Path to various places within college}{Project done as part of the Graph Theory course}{BITS Pilani Hyderabad, India}{}{The C++ program was based on 'Dijkstra's Shortest Path Algorithm', with weighted edges. The weights for the edges were generated keeping in mind the 'Sun-Index', a measure of the intensity of sun light on the path.}
+
+\section{Programming Language}
+\cvline{General}{Proficient: R, JAVA, C, Python}
+\cvline{Web Development}{Intermediate: NodeJS, Javascript, HTML, D3JS(for visualization)}
+\cvline{Database Systems}{Intermediate: MySQL, MongoDB}
+
+\section{Other Relevant Courses Completed/Pursuing}
+\cvline{Computer Science}{Machine Learning 1 and 2, Information Retrieval, Data Structures and Algorithms, Object Oriented Programming, Logic in Computer Science, Database Systems, Digital Design, Microprocessors, Operating Systems.}
+\cvline{Mathe-matics}{Optimization(Linear and Non-linear), Graph Theory, Operations Research, Topology, Functional Analysis, Abstract Algebra, Real Analysis, Numerical Analysis, Mathematical Methods,Number theory}
+
+\section{Leadership Roles}
+\cventry{August 2016-May 2017}{Team Lead, Government School Adoption Program}{NIRMAAN Organization}{BITS Pilani Hyderabad Chapter, India}{}{Led a team of students in the Malkaram School Adoption Program, as part of the social service chapter of NIRMAAN in BITS Hyderabad.A year long curriculum for classes 1-5 of a local school for the under-privileged, was prepared.Weekly visits to the school were conducted, where they were taught accordingly.}
+\cventry{August 2016-May 2017}{Part of the Editorial Team, On the Rocks, 2016}{Official Magazine}{BITS Pilani Hyderabad, India}{}{Was part of the core Editorial Team for the official magazine of BITS Pilani Hyderabad.}
+
+
+\end{document}
