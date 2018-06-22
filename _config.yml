@@ -2,3 +2,4 @@ theme: jekyll-theme-tactile
 markdown: kramdown
 title: Ahana Ghosh
 description: Student
+permalink: /blog/:year/:month/:day/:title
