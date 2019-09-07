@@ -7,6 +7,35 @@
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{graphicx}
 
+%%%%%%%%%% Bibliography Environment
+\usepackage[style=authoryear,sorting=ydnt,dashed=false]{biblatex}
+
+\renewbibmacro*{date}{}
+\renewbibmacro*{date+extrayear}{}
+\renewbibmacro*{issue+date}{}
+\newcommand*{\bibyear}{}
+
+\defbibenvironment{bibliography}
+  {\list
+     {\iffieldequals{year}{\bibyear}
+        {}
+        {\printfield{year}%
+         \savefield{year}{\bibyear}}}
+     {\setlength{\topsep}{0pt}% layout parameters based on moderncvstyleclassic.sty
+      \setlength{\labelwidth}{\hintscolumnwidth}%
+      \setlength{\labelsep}{\separatorcolumnwidth}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \leftmargin\labelwidth%
+      \advance\leftmargin\labelsep}%
+      \sloppy\clubpenalty4000\widowpenalty4000}
+  {\endlist}
+  {\item}
+
+%\usepackage[scale=0.975]{geometry}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{graphicx}
+\addbibresource{publications.bib}
+
 
 \firstname{Ahana~Ghosh}
 \familyname{}
@@ -25,31 +54,39 @@
 \renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 \makeatother
 
-\usepackage{multibib}
-\newcites{book,misc}{{Books},{Others}}
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
 
 \nopagenumbers{}                         
 \begin{document}
-\maketitle \Large{\textbf{B.Tech Computer Science, M.Sc. Hons.Mathematics}\\ \textbf{5{$^{th}$} Year}\\
-\textbf{BITS Pilani Hyderabad, India}\\
-\textbf{Email}: \href{ahana204@gmail.com}{ahana204@gmail.com},      \href{f20140525@hyderabad.bits-pilani.ac.in}{f20140525@hyderabad.bits-pilani.ac.in}}   
+\maketitle \Large{\textbf{Doctoral Student}\\ \textbf{Machine Teaching Group}\\
+\textbf{Max Planck Institute for Software Systems, Saarbrucken, Germany}\\
+\textbf{Email}: \href{gahana@mpi-sws.org}{gahana@mpi-sws.org},      \href{ahana204@gmail.com}{ahana204@gmail.com}}   
 %\maketitle
 \section{Education}
-\cventry{2014--Present}{Dual Degree, Bachelor's in Computer Science and Masters in Mathematics, }{BITS Pilani Hyderabad, Class of 2019}{Telangana, India}{\textit{CGPA till 8${th}$ semester : 9.068}}{}
+\cventry{2014--Present}{Doctoral Student, Machine Teaching Group}{Max Planck Institute for Software Systems}{Saarbrucken, Germany}{}{}
+\cventry{2014--2019}{Dual Degree, Bachelor's in Computer Science and Masters in Mathematics, }{BITS Pilani Hyderabad, Class of 2019}{Telangana, India}{\textit{Distinction Division}}{}
 \cventry{2012--2014}{High School}{Andhra Pradesh Higher Secondary Board of Education}{Telangana, India}{\textit{97.7 per cent}}{}
 \cventry{2012}{Secondary School, Central Board of Secondary Education}{CHIREC Public School}{Telangana, India}{\textit{CGPA:10}}{} 
 
 \section{Scholastic Achievements}
-\cvline{2014-Present}{INSPIRE Scholar: Scholarship for higher education awarded by the department of science and technology, government of India, for a period of 5 years. Annual Stipend:INR 60,000/- }
+\cvline{July-2019}{Participated in the Machine Learning Summer School(MLSS 2019) held in London.}
+\cvline{2014-2019}{INSPIRE Scholar: Scholarship for higher education awarded by the department of science and technology, government of India, for a period of 5 years. Annual Stipend:INR 60,000/- }
 \cvline{July 2017}{Awarded the Best Poster at 4{$^{th}$} Annual Summer Symposium, Tata Institute of Fundamental Research, Hyderabad: The poster was on the MongoDB and NodeJS based application for a 134 Kilo Molecular Dataset.}
 \cvline{2015-2017}{BITS Pilani Hyderabad merit scholar: Received the BITS Hyderabad merit scholarship for semesters 3,4,5 and 6}
 \cvline{2014-2016}{Course Topper: Biology, Abstract Algebra, Theory of Ordinary Differential Equations}
 \cvline{2016-2017}{Teaching Assistant: MATH F112 (Probability and Statistics), MATH F212 (Optimization)}
 
 \section{Research Experience}
-\cventry{June 2018-Present}{Research Intern}{Max Planck Institute of Software Systems, Saarbrucken, Germany}{}{Machine Teaching Group under Adish Singla}{Currently pursuing a project on Inverse Reinforcement Learning in the Machine Teaching Group under Adish Singla.}
+\cventry{June 2018-July 2019}{Research Intern}{Max Planck Institute of Software Systems, Saarbrucken, Germany}{}{Machine Teaching Group under Adish Singla}{Project on Reinforcement Learning for Assistive Systems in the Machine Teaching Group under Adish Singla.}
 \cventry{May-July 2017}{VSRP (Visiting Student Research Program) Fellow}{Tata Institute of Fundamental Research, Hyderabad, India}{}{Database Systems project under Dr. Raghunathan Ramakrishnan}{Developed a database/data-mining platform and a RESTful API for 134Kilo molecular dataset using NodeJS and MONGODB. The web application enabled property  based querying and charting of the dataset.}
 \cventry{June-August 2016}{VSRP (Visiting Student Research Program) Fellow}{Tata Institute of Fundamental Research, Hyderabad, India}{}{Machine Learning project under Dr. Raghunathan Ramakrishnan}{Studied sparse supervised learning algorithms: LASSO, ridge regression, SVM, Random Forest for application to classifying dipole-dipolarophile organic reactions. Also, mechanisms to improve the performance of LASSO were implemented using optimization techniques such as SUBPLEX, coordinate descent algorithms and Ridge Regression in order to reduce the bias of LASSO for better predictive accuracy.}
+
+%\section{Publications}
+\nocite{*}
+\printbibliography[title={Publications}]
+%\bibliographystyle{unsrt}
+%\bibliography{publications}
 
 \section{Seminars and Posters Presented}
 \cventry{July 2017}{Poster presented at the 4th annual summer symposium}{Tata Institute of Fundamental Research}{Hyderabad, India}{}{The poster depicted the utility of MongoDB for the creation BIG databases, as it was applied to the 134Kilo Molecules dataset.}
